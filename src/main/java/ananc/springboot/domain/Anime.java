@@ -1,14 +1,10 @@
 package ananc.springboot.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+@Data
 @AllArgsConstructor
-@RequiredArgsConstructor
-@Getter
-@Setter
 public class Anime {
+    private Long id;
     private String name;
 }
