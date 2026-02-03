@@ -45,4 +45,10 @@ public class AnimeController {
     public ResponseEntity<Anime> save(@RequestBody Anime anime) {
         return ResponseEntity.ok(animeRepository.save(anime));
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        animeRepository.delete(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 }
