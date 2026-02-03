@@ -2,12 +2,12 @@
   "info": {
     "_postman_id": "bd789c26-4acc-423c-9a24-4036c20a9294",
     "name": "AnimeSpringboot",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "47263870"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
       "name": "list all animes",
+      "id": "026ba84d-1021-42b8-aff9-fa637c59ef12",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -39,6 +39,7 @@
     },
     {
       "name": "get anime by ID",
+      "id": "98cad300-70d4-49e0-b25b-5c46a624d5a4",
       "request": {
         "method": "GET",
         "header": [],
@@ -59,6 +60,7 @@
     },
     {
       "name": "post new anime",
+      "id": "078aa7ba-11ee-4d61-97d8-36b062febf72",
       "request": {
         "method": "POST",
         "header": [],
@@ -86,7 +88,8 @@
       "response": []
     },
     {
-      "name": "New Request",
+      "name": "delete an anime by ID",
+      "id": "26a97f5c-246b-444a-9bd9-775f8f8be401",
       "request": {
         "method": "DELETE",
         "header": [],
@@ -100,6 +103,36 @@
           "path": [
             "animes",
             "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update anime by ID",
+      "id": "fdacb325-0c9e-4647-b5a0-95d2524ea62a",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Shingeki no Kyojin\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/animes/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "animes",
+            "1"
           ]
         }
       },

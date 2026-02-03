@@ -37,4 +37,9 @@ public class AnimeRepository {
     public void delete(Long id) {
         animes.remove(utils.findAnimeOrThrowNotFound(id, animes));
     }
+
+    public void update(Anime anime) {
+        animes.remove(utils.findAnimeOrThrowNotFound(anime.getId(), animes));
+        animes.add(anime);
+    }
 }
