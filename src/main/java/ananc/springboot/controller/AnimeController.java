@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 @RestController
 @RequestMapping("animes")
 @Slf4j
@@ -25,6 +27,11 @@ public class AnimeController {
     @GetMapping("/{id}")
     public ResponseEntity<Anime> finfById(@PathVariable Long id) {
         return ResponseEntity.ok(animeService.findById(id));
+    }
+
+    @GetMapping("/find")
+    public ResponseEntity<List<Anime>> findByName(@RequestParam(value = "name") String name) {
+        return ResponseEntity.ok(animeService.findByName(name));
     }
 
     @PostMapping

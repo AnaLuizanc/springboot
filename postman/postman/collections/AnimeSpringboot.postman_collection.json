@@ -59,6 +59,33 @@
       "response": []
     },
     {
+      "name": "get anime by Name",
+      "id": "42b081f1-f97c-46c3-9bc9-57db9a965872",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/animes/find?name=naruto",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "animes",
+            "find"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "naruto"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "post new anime",
       "id": "078aa7ba-11ee-4d61-97d8-36b062febf72",
       "request": {
