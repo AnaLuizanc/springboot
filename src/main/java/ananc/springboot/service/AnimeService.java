@@ -5,6 +5,7 @@ import ananc.springboot.repository.AnimeRepository;
 import ananc.springboot.util.Utils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -27,6 +28,7 @@ public class AnimeService {
         return utils.findAnimeOrThrowNotFound(id, animeRepository);
     }
 
+    @Transactional
     public Anime save(Anime anime) {
         return animeRepository.save(anime);
     }
