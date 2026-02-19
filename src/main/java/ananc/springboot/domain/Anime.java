@@ -20,6 +20,6 @@ public class Anime {
     private Long id;
 
     @NotNull
-    @NotEmpty (message = "Name cannot be empty")
+    @NotEmpty(message = "Name cannot be empty")
     private String name;
 }
