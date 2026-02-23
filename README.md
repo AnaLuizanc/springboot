@@ -27,9 +27,57 @@ A demo REST API built with Spring Boot for managing anime information. This proj
 
 ## Getting Started
 
-Run the application:
-```bash
-./gradlew bootRun
-```
+### Prerequisites
+
+- Java 25
+- MySQL 8.0+ or Docker
+- Gradle
+
+### Setup
+
+1. **Clone the repository**
+
+2. **Configure environment variables**
+   
+   Copy the `.env.example` file to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+   
+   Then edit the `.env` file with your database credentials:
+   ```properties
+   DB_URL=jdbc:mysql://localhost:3306/animes
+   DB_USERNAME=your_mysql_username
+   DB_PASSWORD=your_mysql_password
+   MYSQL_ROOT_PASSWORD=your_root_password
+   MYSQL_DATABASE=animes
+   ```
+
+3. **Start the database**
+
+   **Option A: Using Docker (Recommended)**
+   ```bash
+   docker-compose up -d
+   ```
+   This will start a MySQL container with the credentials from your `.env` file.
+
+   **Option B: Using existing MySQL installation**
+   ```sql
+   CREATE DATABASE animes;
+   ```
+
+4. **Run the application**
+   ```bash
+   ./gradlew bootRun
+   ```
 
 The API will be available at `http://localhost:8080`
+
+### Important Security Notes
+
+- **Never commit the `.env` file to version control**
+- The `.env` file contains sensitive credentials and is already in `.gitignore`
+- Use `.env.example` as a template for your local `.env` file
+- Each developer should create their own `.env` file locally
+- The `docker-compose.yml` also uses environment variables from `.env`
+

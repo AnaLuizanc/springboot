@@ -42,3 +42,7 @@ out/
 .env
 application-local.properties
 src/main/resources/application.properties
+
+### Docker ###
+docker-compose.yml
+
