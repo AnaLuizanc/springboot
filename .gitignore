@@ -37,3 +37,8 @@ out/
 .vscode/
 
 *.postman_environment.json
+
+### Application Properties ###
+.env
+application-local.properties
+src/main/resources/application.properties
